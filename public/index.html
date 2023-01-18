@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>ms-ra-forwarder</title>
+  <title>之心软件语音接口</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -12,11 +12,9 @@
 <body>
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" target="_blank" href="https://github.com/meetcw/ms-ra-forwarder">ms-ra-forwarder</a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="github-button" href="https://github.com/meetcw/ms-ra-forwarder" data-size="large"
-            data-show-count="true" aria-label="Star meetcw/ms-ra-forwarder on GitHub">Star</a>
+
         </li>
       </ul>
     </div>
@@ -25,7 +23,7 @@
     <div class="row">
       <div class="col">
         <div class="alert alert-primary" role="alert">
-          现在可以使用 Azure 版本的 API 啦！<a href="/azure.html">点我查看</a>！
+
         </div>
       </div>
     </div>
@@ -33,7 +31,7 @@
       <div class="row">
         <div class="col">
           <label for="name" class="form-label">配置名称：</label>
-          <input name="name" type="text" class="form-control" value="大声朗读" />
+          <input name="name" type="text" class="form-control" value="微软" />
           <div class="form-text">在阅读APP中显示的名称。</div>
         </div>
       </div>
@@ -91,14 +89,15 @@
         <div class="row">
           <div class="col">
             <label for="previewText" class="form-label">测试文本：</label>
-            <textarea name="previewText" class="form-control" rows="3" cols="">如果喜欢这个项目的话请点个 Star 吧。</textarea>
+            <textarea name="previewText" class="form-control" rows="3" cols="">这是微软和成测试语音。</textarea>
           </div>
         </div>
         <div style="height:20px"></div>
         <div class="row">
           <div class="col">
             <button id="previewButton" type="button" class="btn btn-secondary" onclick="preview()">测试</button>
-            <button type="button" class="btn btn-primary" onclick='createLegadoUrl()'>生成阅读（legado）语音引擎链接</button>
+            <button type="button" class="btn btn-primary" onclick='createLegadoUrl()'>生成阅读语音导入链接</button>
+           <a href="/azure.html">点击进入Azure接口</a>！
           </div>
         </div>
     </form>
@@ -165,7 +164,7 @@
 
     function updateConfigName() {
       let voice = document.getElementsByName('voiceName')[0].value;
-      document.getElementsByName('name')[0].value = '大声朗读（' + voice + '）';
+      document.getElementsByName('name')[0].value =voice;
     }
 
     function createSSML(text, voiceName) {
@@ -244,4 +243,4 @@
   </script>
 </body>
 
-</html>
+    </html>
